@@ -65,9 +65,11 @@ Unity ML-Agents를 사용하기 위해서는 **Unity Hub**를 설치하고, ML-A
 2. 다운로드한 설치 파일을 실행하여 지시에 따라 Unity Hub를 설치합니다.
 
 ![unity_add_project.png](unity_add_project.png)
+
 3. Unity Hub를 실행한 후, **Add** 버튼을 클릭하여 ML-Agents 압축 파일에 포함된 **Project** 폴더를 선택하여 엽니다.
 
 ![install_unity_version.png](install_unity_version.png)
+
 4. 선택한 Unity 프로젝트가 특정 Unity Editor 버전을 요구할 경우, **Install** 버튼을 통해 해당 Unity 버전을 설치하라는 메시지가 표시됩니다.
    - 이때 **Unity 2023.2.13f1** 버전을 설치하도록 선택합니다.
 
@@ -80,11 +82,13 @@ Unity Hub에서 프로젝트를 열고 해당 Unity 버전이 설치되면, 다�
 이 단계에서는 ML-Agents를 통해 강화학습된 에이전트들이 어떻게 행동하는지 확인해보겠습니다. **DungeonEscape** 예제를 사용하여 진행합니다.
 
 ![unity_project_tab.png](unity_project_tab.png)
+
 1. Unity Editor에서 **Project** 탭을 찾습니다.
 2. **DungeonEscape** 씬을 찾아 더블 클릭하여 엽니다.
    - 씬의 경로: `Assets\ML-Agents\Examples\DungeonEscape\Scenes`
 
 ![unity_display.png](unity_display.png)
+
 3. 상단의 **재생** 버튼을 클릭하면, 에이전트들이 학습된 행동을 수행하는 모습을 확인할 수 있습니다.
 
 ---
@@ -94,13 +98,16 @@ Unity Hub에서 프로젝트를 열고 해당 Unity 버전이 설치되면, 다�
 이 단계에서는 ML-Agents를 사용하여 에이전트를 직접 학습시키는 방법을 알아봅니다.
 
 ![find_agent.png](find_agent.png)
+
 1. Unity Editor의 **Hierarchy** 탭에서 **BehaviorParameters** 컴포넌트를 사용하는 모든 오브젝트를 찾습니다.
    - **DungeonEscapeAgent**를 검색하여 해당 오브젝트들을 모두 찾고 일괄 선택합니다.
 
 ![find_model.png](find_model.png)
+
 2. **Inspector** 창에서 **BehaviorParameters** 컴포넌트를 찾습니다.
 
 ![delete_model.png](delete_model.png)
+
    - **Model** 옵션을 선택한 후 **delete** 버튼을 눌러 모델을 제거합니다.
 
 3. 활성화된 아나콘다 환경에서 다음 명령어를 입력하여 학습을 시작합니다.
@@ -120,9 +127,11 @@ Unity Hub에서 프로젝트를 열고 해당 Unity 버전이 설치되면, 다�
 ## 7단계: 학습 완료된 모델 확인 및 Unity에 ONNX 모델 적용
 
 ![result_learning.png](result_learning.png)
+
 학습이 완료되면 **results** 폴더에 저장된 모델 파일을 Unity에 적용하여 에이전트가 학습된 행동을 수행하도록 설정할 수 있습니다. 이 단계에서는 ONNX 모델 파일을 가져와 Unity에 적용하는 방법을 설명합니다.
 
 ![이전에 학습한 다른 폴더의 내용을 예시로 가져왔음](result_files.png)
+
 1. 학습이 완료되면 **results** 폴더 내에 `--run-id` 이름(DungeonEscape)으로 된 폴더가 생성됩니다.
    - 이 폴더 안에 `.onnx` 확장자를 가진 학습된 모델 파일이 포함되어 있습니다.
 
